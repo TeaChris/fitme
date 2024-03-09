@@ -8,6 +8,10 @@ body,
   height: 100%;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 @layer base {
   h1 {
     @apply text-5xl sm:text-[3.75rem] text-black font-medium leading-8 tracking-wide
@@ -19,6 +23,10 @@ body,
 
   h3 {
     @apply text-[2rem] text-black font-medium
+  }
+
+  h4 {
+    @apply text-[28px] font-bold text-black
   }
 
   h5 {

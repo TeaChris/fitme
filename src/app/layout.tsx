@@ -6,6 +6,7 @@ import { ClerkProvider } from '@clerk/nextjs'
 import './globals.css'
 import { cn } from '@/lib/utils'
 import { Toaster } from 'sonner'
+import { Navbar } from '@/components/navbar'
 
 const font = Montserrat({
   subsets: ['latin'],
@@ -32,7 +33,8 @@ export default function RootLayout({
             font.className
           )}
         >
-          <div className="w-full h-full">
+          <Navbar />
+          <div className="w-full h-full pt-12">
             {children}
             <Toaster />
           </div>
