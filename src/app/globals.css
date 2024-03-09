@@ -14,7 +14,7 @@ body,
 
 @layer base {
   h1 {
-    @apply text-5xl sm:text-[3.75rem] text-black font-medium leading-8 tracking-wide
+    @apply text-5xl sm:text-[3.75rem] text-black font-semibold leading-8
   }
 
   h2 {
@@ -34,6 +34,6 @@ body,
   }
 
   p {
-    @apply text-base text-[#404040] leading-6 tracking-wide
+    @apply text-base text-[#404040] leading-5 tracking-wide
   }
 }

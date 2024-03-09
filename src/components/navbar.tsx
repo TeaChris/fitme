@@ -7,13 +7,15 @@ import { nav } from '@/lib'
 import { Input } from './ui/input'
 import { Cart } from './cart-item'
 import Button from './ui/button'
+import { UserButton } from '@clerk/nextjs'
 
 export function Navbar() {
+  const user = false
   return (
     <header className="w-full bg-white inset-x-0">
       <nav className="relative bg-white">
         <MaxWidthWrapper>
-          <div className="flex h-20 items-center">
+          <div className="flex h-24 items-center">
             {/* TODO: add mobile nav */}
 
             <div className="ml-4 flex lg:ml-0 items-center w-full">
@@ -40,9 +42,13 @@ export function Navbar() {
 
                   <Cart />
 
-                  <Button>
-                    <Link href="/sign-in">{nav.buttonText}</Link>
-                  </Button>
+                  {user ? (
+                    <UserButton />
+                  ) : (
+                    <Button>
+                      <Link href="/sign-in">{nav.buttonText}</Link>
+                    </Button>
+                  )}
                 </div>
               </div>
             </div>
