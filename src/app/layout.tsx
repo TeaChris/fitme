@@ -26,7 +26,12 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={cn('relative h-full antialiased', font.className)}>
+        <body
+          className={cn(
+            'relative h-full text-black antialiased',
+            font.className
+          )}
+        >
           <div className="w-full h-full">
             {children}
             <Toaster />

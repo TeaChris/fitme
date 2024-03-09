@@ -7,3 +7,25 @@ body,
 :root {
   height: 100%;
 }
+
+@layer base {
+  h1 {
+    @apply text-5xl sm:text-[3.75rem] text-black font-medium leading-8 tracking-wide
+  }
+
+  h2 {
+    @apply text-3xl text-black
+  }
+
+  h3 {
+    @apply text-[2rem] text-black font-medium
+  }
+
+  h5 {
+    @apply text-base text-[#404040] font-medium
+  }
+
+  p {
+    @apply text-base text-[#404040] leading-6 tracking-wide
+  }
+}
