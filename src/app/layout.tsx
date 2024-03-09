@@ -3,10 +3,13 @@ import { Montserrat } from 'next/font/google'
 
 import { ClerkProvider } from '@clerk/nextjs'
 
-import './globals.css'
 import { cn } from '@/lib/utils'
 import { Toaster } from 'sonner'
+
 import { Navbar } from '@/components/navbar'
+import { Footer } from '@/components/footer'
+
+import './globals.css'
 
 const font = Montserrat({
   subsets: ['latin'],
@@ -38,6 +41,7 @@ export default function RootLayout({
             {children}
             <Toaster />
           </div>
+          <Footer />
         </body>
       </html>
     </ClerkProvider>
