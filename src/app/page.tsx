@@ -1,4 +1,6 @@
+import { Featured } from '@/components/featured'
 import { MaxWidthWrapper } from '@/components/max-width-wrapper'
+import { Recommended } from '@/components/recommended'
 import { Animation } from '@/components/ui/animation'
 import Button from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -73,6 +75,15 @@ export default function Home() {
           </div>
         </MaxWidthWrapper>
       </div>
+
+      <section className="w-full h-max">
+        <MaxWidthWrapper>
+          <div className="w-full flex justify-between lg:h-[30rem]">
+            <Featured />
+            <Recommended />
+          </div>
+        </MaxWidthWrapper>
+      </section>
     </main>
   )
 }
