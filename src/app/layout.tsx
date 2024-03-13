@@ -37,7 +37,7 @@ export default function RootLayout({
           )}
         >
           <Navbar />
-          <div className="w-full h-full pt-12">
+          <div className="w-full py-12">
             {children}
             <Toaster />
           </div>
