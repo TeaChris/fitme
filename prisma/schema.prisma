@@ -8,3 +8,20 @@ datasource db {
   provider = "mongodb"
   url      = env("DATABASE_URL")
 }
+
+model Product {
+  id            String   @id @default(cuid()) @map("_id")
+  createdAt     DateTime @default(now())
+  title         String
+  desc          String
+  img           String?
+  price         Int
+  isFeatured    Boolean  @default(false)
+  options       Json[]
+}
+
+
+model  Category {
+  id          String  @id @default(cuid()) @map("_id")
+}
+
