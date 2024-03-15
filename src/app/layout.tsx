@@ -10,6 +10,7 @@ import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 
 import './globals.css'
+import TrpcProvider from '@/providers/trpc-provider'
 
 const font = Montserrat({
   subsets: ['latin'],
@@ -30,19 +31,21 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body
-          className={cn(
-            'relative h-full text-black antialiased',
-            font.className
-          )}
-        >
-          <Navbar />
-          <div className="w-full py-12">
-            {children}
-            <Toaster />
-          </div>
-          <Footer />
-        </body>
+        <TrpcProvider>
+          <body
+            className={cn(
+              'relative h-full text-black antialiased',
+              font.className
+            )}
+          >
+            <Navbar />
+            <div className="w-full py-12">
+              {children}
+              <Toaster />
+            </div>
+            <Footer />
+          </body>
+        </TrpcProvider>
       </html>
     </ClerkProvider>
   )
